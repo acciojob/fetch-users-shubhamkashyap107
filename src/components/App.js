@@ -49,7 +49,7 @@ const App = () => {
             <td>{item.email}</td>
             <td><img src={item.avatar} /></td>
             </tr>
-        }): <h1>No data found to display</h1>}
+        }): <td>No data found to display</td>}
 
     
         </table>
