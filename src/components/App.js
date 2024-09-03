@@ -37,20 +37,21 @@ const App = () => {
   return (
     <div>
         
-        <button onClick={btnClickHandler}>{loading ? "Loading..." : "Get User List"}</button>
+        <button className="btn" onClick={btnClickHandler}>{loading ? "Loading..." : "Get User List"}</button>
 
 
       <table>
 
-        {data.map((item) => {
+        {data.length ? data.map((item) => {
           return <tr>
             <td>{item.first_name}</td>
             <td>{item.last_name}</td>
             <td>{item.email}</td>
             <td><img src={item.avatar} /></td>
             </tr>
-        })}
+        }): <h1>No data found to display</h1>}
 
+    
         </table>
 
     </div>
