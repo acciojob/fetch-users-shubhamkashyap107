@@ -30,6 +30,10 @@ const App = () => {
 
       <p>No data found to display.</p>
 
+      <table>
+        
+      </table>
+
       </div>
 
     )
