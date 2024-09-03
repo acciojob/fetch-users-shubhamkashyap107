@@ -30,8 +30,8 @@ const App = () => {
 
       <p>No data found to display.</p>
 
-      <table>
-        
+      <table style={{height:"100px", width:"300px"}}>
+
       </table>
 
       </div>
