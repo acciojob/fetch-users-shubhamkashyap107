@@ -19,6 +19,22 @@ const App = () => {
       });
   }
 
+  if(!data.length)
+  {
+    return (
+      <div>
+
+      <button className="btn" onClick={btnClickHandler}>
+        {loading ? "Loading..." : "Get User List"}
+      </button>
+
+      <p>No data found to display.</p>
+
+      </div>
+
+    )
+  }
+
   return (
     <div>
       <button className="btn" onClick={btnClickHandler}>
@@ -27,20 +43,16 @@ const App = () => {
 
       <table>
         <tbody>
-          {data.length ? (
-            data.map((item, index) => (
+       
+            {data.map((item, index) => (
               <tr key={index}>
                 <td>{item.first_name}</td>
                 <td>{item.last_name}</td>
                 <td>{item.email}</td>
                 <td><img src={item.avatar} alt="User Avatar" /></td>
               </tr>
-            ))
-          ) : (
-            <tr>
-              <td colSpan="4">No data found to display</td>
-            </tr>
-          )}
+            ))}
+          
         </tbody>
       </table>
     </div>
